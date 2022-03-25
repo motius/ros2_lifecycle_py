@@ -16,8 +16,8 @@ from lifecycle_msgs.srv import GetState
 class LifecycleNode(Node):
 
     
-    def __init__(self, node_name:str):
-        super().__init__(node_name)
+    def __init__(self, node_name:str, **kwargs):
+        super().__init__(node_name, **kwargs)
         self.state = State.PRIMARY_STATE_UNKNOWN
 
         self.available_transitions = None
